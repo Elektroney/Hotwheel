@@ -1,0 +1,5 @@
+pyqt5==5.15.4
+pyqt5-tools==5.15.4
+pynput==1.7.3
+pystray==0.16.1
+Pillow==8.2.0
