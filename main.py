@@ -13,6 +13,7 @@ from pystray import MenuItem as item
 from PyQt5.QtWidgets import QApplication
 from pynput.mouse import Listener
 
+import time
 import ctypes
 import pystray
 import PIL.Image
@@ -75,4 +76,5 @@ if __name__ == '__main__':
                 window.hide()
 
             app.processEvents()
-
+            time.sleep(0.05)
+        
