@@ -10,6 +10,7 @@ import PIL.Image
 import threading
 import subprocess
 import traceback
+import importlib
 
 # Local Modules
 import settings
