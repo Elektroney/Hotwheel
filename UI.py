@@ -2,7 +2,6 @@ from PyQt5.QtWidgets import QGridLayout , QWidget, QLabel
 from PyQt5.QtCore import Qt, QPoint, QLineF
 from PyQt5.QtGui import QPainter, QColor, QCursor, QTransform
 import math
-
 import settings
 import plugin
 
@@ -24,7 +23,6 @@ class UI(QWidget):
             self.segments.append(segment_center)
 
         center = QPoint(round(self.width() /2)  ,round(self.height()/2 ) )
-        layout = QGridLayout(self)
         self.labels = []
         for i, plug in enumerate(plugin.plugins):
             

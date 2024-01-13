@@ -1,11 +1,10 @@
 import os
 import importlib
-
 import settings
 import logger
 
 plugins = []
-
+stageReinitalization = False
 def LoadPlugins():
     global plugins
     plugins = [None for i in range(settings._PLUGIN_ARRAY_SIZE)]
@@ -44,8 +43,15 @@ def LoadPlugins():
                     
                         plugins.append(plugin_instance)
 
-def ExecutePlugin(index):
+def needReinit():
+    global stageReinitalization
+    toReturn = stageReinitalization
+    stageReinitalization = False
+    return toReturn
 
+def ExecutePlugin(index):
+    global stageReinitalization
     if(index > len(plugins) or plugins[index] == None):
         return
     plugins[index].execute()
+    stageReinitalization = True

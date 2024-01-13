@@ -1,8 +1,3 @@
-
-
-
-
-
 from pystray import MenuItem as item
 from PyQt5.QtWidgets import QApplication
 from pynput.mouse import Listener
@@ -24,7 +19,6 @@ import logger
 
 mouseButtonIsHeld = False
 running = True
-
 
 def on_click(x, y, button, pressed):
     global mouseButtonIsHeld
@@ -68,6 +62,11 @@ if __name__ == '__main__':
 
         with Listener(on_click=on_click) as listener:
             while running:
+                if(plugin.needReinit()):
+                    importlib.reload(UI)
+                    window = UI.UI()
+                    stageReinitalization = False
+                    logger.print("Reinitialized UI!")
                 if check_activation_key() or mouseButtonIsHeld:
                     window.show()
                 else:
