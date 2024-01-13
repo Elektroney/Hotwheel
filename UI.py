@@ -1,9 +1,11 @@
 from PyQt5.QtWidgets import QGridLayout , QWidget, QLabel
 from PyQt5.QtCore import Qt, QPoint, QLineF
 from PyQt5.QtGui import QPainter, QColor, QCursor, QTransform
-import settings
 import math
+
+import settings
 import plugin
+
 class UI(QWidget):
     def __init__(self):
         super().__init__()

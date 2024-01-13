@@ -1,30 +1,26 @@
-import sys
-import datetime
-import os
 
-if not os.path.exists('logs'):
-    os.makedirs('logs')
-log_file = open(".\\logs\\"+ datetime.datetime.now().strftime("%Y.%m.%d-%H-%M-%S")+ ".log","a")
-sys.stdout = log_file
-sys.stderr = log_file
+
+
 
 
 from pystray import MenuItem as item
 from PyQt5.QtWidgets import QApplication
 from pynput.mouse import Listener
 
+import sys
 import time
 import ctypes
 import pystray
 import PIL.Image
 import threading
 import subprocess
-
+import traceback
 
 # Local Modules
 import settings
 import plugin
 import UI
+import logger
 
 mouseButtonIsHeld = False
 running = True
@@ -60,21 +56,25 @@ def tray_icon_thread():
     systemTrayIcon.run()
 
 if __name__ == '__main__':
-    plugin.LoadPlugins()
-    app = QApplication(sys.argv)
-    window = UI.UI()
+    try:
+        plugin.LoadPlugins()
+
+        app = QApplication(sys.argv)
+        window = UI.UI()
 
 
-    tray_thread = threading.Thread(target=tray_icon_thread, daemon=True)
-    tray_thread.start()
+        tray_thread = threading.Thread(target=tray_icon_thread, daemon=True)
+        tray_thread.start()
 
-    with Listener(on_click=on_click) as listener:
-        while running:
-            if check_activation_key() or mouseButtonIsHeld:
-                window.show()
-            else:
-                window.hide()
+        with Listener(on_click=on_click) as listener:
+            while running:
+                if check_activation_key() or mouseButtonIsHeld:
+                    window.show()
+                else:
+                    window.hide()
 
-            app.processEvents()
-            time.sleep(0.05)
-        
+                app.processEvents()
+                time.sleep(0.05)
+        logger.print("Exited!")
+    except Exception:
+        logger.print(traceback.format_exc())

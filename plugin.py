@@ -1,6 +1,8 @@
 import os
 import importlib
+
 import settings
+import logger
 
 plugins = []
 
@@ -24,7 +26,7 @@ def LoadPlugins():
                 module_path = f'{plugins_folder}.{plugin_folder}.{module_name}'
 
                 # Import the module dynamically
-                print(module_path)
+                logger.print(module_path)
                 module = importlib.import_module(module_path)
 
                 # Assuming there is a class named 'Plugin' in each plugin
@@ -35,12 +37,13 @@ def LoadPlugins():
                         try:
                             plugins[int(open(f"{plugins_folder}\{plugin_folder}\index" ,'r').read())] = plugin_instance
                         except Exception as e:
-                            print(str(e)+ "\n\nIndex File Doesnt Contain Index of Plugin :" + plugin_folder )
+                            logger.print(str(e)+ "\n\nIndex File Doesnt Contain Index of Plugin :" + plugin_folder )
                     else:   
                     
                         plugins.append(plugin_instance)
 
 def ExecutePlugin(index):
+
     if(index > len(plugins) or plugins[index] == None):
         return
     plugins[index].execute()

@@ -1,4 +1,7 @@
 
+
+_DEBUG_MODE = False
+
 ## USER INPUT
 
 _ACTIVATION_MOUSE_BUTTON = "Button.x1"
@@ -13,3 +16,4 @@ _UI_RADIUS = 1.3
 _BG_COLOR = [1,1,1,100] #(rgba)
 
 _PLUGIN_ARRAY_SIZE = 8
+
