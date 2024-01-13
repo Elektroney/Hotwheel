@@ -9,8 +9,8 @@ Download the latest release and run it
 # Writing a plugin
 Use the example plugin as a template for your plugin,
 
-__init__ gets called upon starting the programm
-Execute gets called upon triggering the plugin in the context menu
+__init__ gets called upon starting the programm  
+__Execute__ gets called upon triggering the plugin in the context menu
 
  Customization
 If you want to adjust the placement of a plugin in the context menu change the number in the index file in the folder of the plugin, the wheels origin point is 90° 
