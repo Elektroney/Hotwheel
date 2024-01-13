@@ -45,7 +45,7 @@ def on_reload(icon, item):
     global running 
     running = False
     icon.stop()
-    subprocess.call("python main.py" )
+    subprocess.call("start.bat" )
 
 def tray_icon_thread():
     image = PIL.Image.open("wheel.ico")
