@@ -39,8 +39,9 @@ def check_activation_key():
     return ctypes.windll.user32.GetKeyState(settings._ACTIVATION_KEY) & 0x8000 != 0
 
 def on_exit(icon, item):
+    global running 
     icon.stop()
-    os._exit(1)
+    running = False
 def on_reload(icon, item):
     global running 
     running = False
