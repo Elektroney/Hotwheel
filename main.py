@@ -1,18 +1,32 @@
 import sys
-import os
-import ctypes
+import datetime
+
+log_file = open(".\\logs\\"+ datetime.datetime.now().strftime("%Y.%m.%d-%H-%M-%S")+ ".log","a")
+sys.stdout = log_file
+sys.stderr = log_file
+
+
+from pystray import MenuItem as item
 from PyQt5.QtWidgets import QApplication
 from pynput.mouse import Listener
-import UI
-import settings
+
+import os
+import ctypes
 import pystray
-from pystray import MenuItem as item
 import PIL.Image
 import threading
-import plugin
 import subprocess
+
+
+# Local Modules
+import settings
+import plugin
+import UI
+
 mouseButtonIsHeld = False
 running = True
+
+
 def on_click(x, y, button, pressed):
     global mouseButtonIsHeld
     if str(button) != settings._ACTIVATION_MOUSE_BUTTON:
