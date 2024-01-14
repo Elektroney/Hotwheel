@@ -4,12 +4,32 @@
 
 Hotwheel is an innovative application designed to create a circular context menu, offering modular plugin support to enhance user interactions. The window displays plugins arranged in a circular layout, allowing users to execute them by moving the mouse in the direction of the corresponding segment. This project aims to fill a crucial missing interaction in the workflow, ultimately boosting productivity.
 
+
+
+
 ## Installation
 To get started with Hotwheel, follow these simple steps:
 1. Download the latest release.
-2. Run the `run.vbs` script.
+2. Change the activation key to your liking in `settings.py`
+3. Run the `run.vbs` script.
 
-## Writing a Plugin
+  
+<br>
+
+## How to Use - Demo
+
+To utilize Hotwheel's functionality, follow these simple steps:
+
+1. Press your activation key 
+2. Move your mouse cursor in the direction of the desired function.
+3. Release your activation key or mouse button to complete the process.
+4. The plugins **\_\_Execute\_\_:** function will get called.
+
+  <img src="https://github.com/Elektroney/Hotwheel/assets/54000878/4cb701e9-8623-46e3-b3c3-fdeee72f16b2" width="300" height="300">
+  
+<br>  
+  
+ ## Writing a Plugin
 Creating a new plugin for Hotwheel is straightforward. Use the provided example plugin as a template, with the following key functions:
 
 - **\_\_init\_\_:** This function is called upon starting the program.
