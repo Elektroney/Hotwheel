@@ -13,8 +13,6 @@ To get started with Hotwheel, follow these simple steps:
 2. Change the activation key to your liking in `settings.py`
 3. Run the `run.vbs` script.
 
-  
-<br>
 
 ## How to Use - Demo
 
