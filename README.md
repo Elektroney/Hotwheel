@@ -10,7 +10,7 @@ The intend of this project is to increase productivity, as I feel like this is a
 
 
 
-## Installation
+## Installation 🛠️
 To get started with Hotwheel, follow these simple steps:
 1. Download the latest [release](https://github.com/Elektroney/Hotwheel/releases/).
 2. Change the activation key to your liking in `settings.py`
@@ -60,7 +60,7 @@ If you think your plugin could be usefull to others don't hesitate to [share](ht
 Remember to upload the __libs__ folder along with your plugin when sharing. 
 ## Customization
 Adjusting the placement of a plugin in the context menu is possible by changing the number in the index file in the plugin's folder. The wheel's origin point is set at 90°. For additional customization options, refer to the settings.py file.
-## Todo
+## Todo 📝
 🔲Better looking UI with animations  
 🔲Better development qol for installing packages and shipping it as one  
 🔲Linux Support 🐧 (Shouldn't be to hard)  
