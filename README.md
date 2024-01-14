@@ -49,3 +49,7 @@ Adjusting the placement of a plugin in the context menu is possible by changing 
 🔲Better looking UI with animations  
 🔲Better development qol for installing packages and shipping it as one  
 🔲Linux Support 🐧 (Shouldn't be to hard)  
+<br>  <br>  <br>  
+## Support the Project
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://ko-fi.com/leonkraim)
+
