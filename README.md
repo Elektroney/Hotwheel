@@ -26,7 +26,20 @@ To utilize Hotwheel's functionality, follow these simple steps:
   <img src="https://github.com/Elektroney/Hotwheel/assets/54000878/4cb701e9-8623-46e3-b3c3-fdeee72f16b2" width="300" height="300">
   
 <br>  
-  
+
+## Installing a Plugin
+1. **Extract the Plugin:**
+   If the plugin is in a compressed format (like a zip file), extract its contents to get the plugin folder.
+
+2. **Copy the Plugin:**
+   Copy the entire folder of the plugin.
+
+3. **Paste into the "plugins" Folder:**
+   Navigate to the root directory of the Hotwheel project and locate the "plugins" folder. Paste the copied plugin folder into this directory.
+
+4. **Adjust the index file**
+   If you want to have the plugin appear at a different place on the hotwheel UI change the number inside the index file inside the folder of your plugin incase it doesn't exist create it and change the number to your liking
+
  ## Writing a Plugin
 Creating a new plugin for Hotwheel is straightforward. Use the provided example plugin as a template, with the following key functions:
 
