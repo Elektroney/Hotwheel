@@ -2,7 +2,10 @@
 
 # Hotwheel - Additional Context Menu with Modular Plugin Support
 
-Hotwheel is an application that creates a Circle that serves as an additional context menu with modular plugin support. The window displays plugins arranged in a circular layout, and plugins can be executed by moving your mouse in the direction of corresponding segment. The intend of this project is to increase productivity, as I feel like this is an crucial missing interaction in my workflow.
+Hotwheel is a tool designed to generate a circular context menu, offering modular plugin support. The interface showcases plugins organized in a circular layout, allowing users to execute them by simply moving the mouse toward the relevant segment.\
+The intend of this project is to increase productivity, as I feel like this is an crucial missing interaction in my workflow.
+
+
 
 
 
