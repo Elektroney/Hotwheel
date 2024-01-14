@@ -3,5 +3,10 @@ python311.zip
 ..
 ..\plugins\libs
 Lib\site-packages
+Lib\site-packages\win32
+Lib\site-packages\win32\lib
+Lib\site-packages\win32ctypes\pywin32
+Lib\site-packages\win32ctypes
+Lib\site-packages
 # Uncomment to run site.main() automatically
 #import site
