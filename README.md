@@ -9,7 +9,7 @@ Hotwheel is an innovative application designed to create a circular context menu
 
 ## Installation
 To get started with Hotwheel, follow these simple steps:
-1. Download the latest release.
+1. Download the latest [release](https://github.com/Elektroney/Hotwheel/releases/).
 2. Change the activation key to your liking in `settings.py`
 3. Run the `run.vbs` script.
 
