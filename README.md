@@ -56,6 +56,7 @@ To install a package for use in your plugin, execute the following command:
 ```bash
 .\bin\python.exe -m pip install --target=.\plugins\libs\ PackageName
 ```
+If you think your plugin could be usefull to others don't hesitate to [share](https://github.com/Elektroney/Hotwheel/issues/2) it\
 Remember to upload the __libs__ folder along with your plugin when sharing. 
 ## Customization
 Adjusting the placement of a plugin in the context menu is possible by changing the number in the index file in the plugin's folder. The wheel's origin point is set at 90°. For additional customization options, refer to the settings.py file.
