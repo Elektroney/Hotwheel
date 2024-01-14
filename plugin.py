@@ -17,6 +17,8 @@ def LoadPlugins():
         plugin_path = os.path.join(plugins_folder, plugin_folder)
         if plugin_path == "plugins\\.gitignore":
             continue
+        if plugin_path == "plugins\\libs":
+            continue
         for plugin_file in os.listdir(plugin_path):
             # Ensure it's a Python file and not a directory
             if plugin_file.endswith('.py') and not plugin_file.startswith('__'):

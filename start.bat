@@ -1,1 +1,2 @@
-start .\bin\pythonw.exe main.py
+@echo off
+.\bin\python.exe main.py
