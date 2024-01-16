@@ -1,6 +1,6 @@
 
 
-_DEBUG_MODE = False
+_DEBUG_MODE = True
 
 ## USER INPUT
 
