@@ -91,7 +91,7 @@ if __name__ == '__main__':
                                 key_event = categorize(event)
                                 # Check if it's the mouse button we're interested in
                                 # You'll need to adjust the key_event.keycode check based on your mouse button
-                                print(key_event.keycode)
+
                                 if str( key_event.keycode) == settings._ACTIVATION_MOUSE_EVENT_LINUX:
                                     mouseButtonIsHeld = key_event.keystate == key_event.key_down
                     except BlockingIOError:
