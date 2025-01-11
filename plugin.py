@@ -41,11 +41,12 @@ def LoadPlugins():
                 if hasattr(module, 'Plugin') and callable(getattr(module, 'Plugin')):
                     # Create an instance of the Plugin class and add it to the plugins list
                     plugin_instance = getattr(module, 'Plugin')()
-                    if(os.path.exists(f"{plugins_folder}\{plugin_folder}\index")):
+                    if(os.path.exists(f"{plugins_folder}/{plugin_folder}/index")):
                         try:
-                            plugins[int(open(f"{plugins_folder}\{plugin_folder}\index" ,'r').read())] = plugin_instance
+                            plugins[int(open(f"{plugins_folder}/{plugin_folder}/index" ,'r').read())] = plugin_instance
                         except Exception as e:
-                            logger.print(str(e)+ "\n\nIndex File Doesnt Contain Index of Plugin :" + plugin_folder )
+                            logger.print(str(e)+ "\n\nIndex File Doesnt Contain Index of Plugin :" + pluBTN_MIDDLE
+gin_folder )
                     else:   
                     
                         plugins.append(plugin_instance)
