@@ -19,11 +19,6 @@ def LoadPlugins():
             continue
         if plugin_path == "plugins\\libs":
             continue
-            
-        if plugin_path == "plugins/.gitignore":
-            continue
-        if plugin_path == "plugins/libs":
-            continue
         for plugin_file in os.listdir(plugin_path):
             # Ensure it's a Python file and not a directory
             if plugin_file.endswith('.py') and not plugin_file.startswith('__'):
@@ -41,9 +36,9 @@ def LoadPlugins():
                 if hasattr(module, 'Plugin') and callable(getattr(module, 'Plugin')):
                     # Create an instance of the Plugin class and add it to the plugins list
                     plugin_instance = getattr(module, 'Plugin')()
-                    if(os.path.exists(f"{plugins_folder}/{plugin_folder}/index")):
+                    if(os.path.exists(f"{plugins_folder}\{plugin_folder}\index")):
                         try:
-                            plugins[int(open(f"{plugins_folder}/{plugin_folder}/index" ,'r').read())] = plugin_instance
+                            plugins[int(open(f"{plugins_folder}\{plugin_folder}\index" ,'r').read())] = plugin_instance
                         except Exception as e:
                             logger.print(str(e)+ "\n\nIndex File Doesnt Contain Index of Plugin :" + plugin_folder )
                     else:   
@@ -58,7 +53,6 @@ def needReinit():
 
 def ExecutePlugin(index):
     global stageReinitalization
-
     if(index > len(plugins) or plugins[index] == None):
         return
     plugins[index].execute()
